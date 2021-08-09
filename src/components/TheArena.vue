@@ -23,6 +23,7 @@
           justify-center
         "
       >
+        <p class="p-2">Selected Raid: {{ E9SFight[fightID].name }}</p>
         <p class="p-2">{{ battleText }}</p>
         <button
           class="bg-red-700 p-2 rounded bottom-0"
@@ -40,6 +41,7 @@
 import anime from "animejs";
 import { defineComponent, ref } from "vue";
 import json from "@/encounters/raids/raids-savage.json";
+import { fightID } from "@/functions/fight";
 
 export default defineComponent({
   setup() {
@@ -49,32 +51,32 @@ export default defineComponent({
       while (true) {
         anime({
           targets: "#mar",
-          translateX: E9SFight[0].phases[0].tank1Pos,
+          translateX: E9SFight[fightID.value].phases[0].tank1Pos,
           easing: "easeInOutSine",
           duration: 400,
         });
-        battleText.value = E9SFight[0].phases[0].popupText;
+        battleText.value = E9SFight[fightID.value].phases[0].popupText;
         yield;
         anime({
           targets: "#mar",
-          translateX: E9SFight[0].phases[1].tank1Pos,
+          translateX: E9SFight[fightID.value].phases[1].tank1Pos,
           easing: "easeInOutSine",
           duration: 400,
         });
-        battleText.value = E9SFight[0].phases[1].popupText;
+        battleText.value = E9SFight[fightID.value].phases[1].popupText;
         yield;
         anime({
           targets: "#mar",
-          translateX: E9SFight[0].phases[2].tank1Pos,
+          translateX: E9SFight[fightID.value].phases[2].tank1Pos,
           easing: "easeInOutSine",
           duration: 400,
         });
-        battleText.value = E9SFight[0].phases[2].popupText;
+        battleText.value = E9SFight[fightID.value].phases[2].popupText;
         yield;
       }
     };
     let generate = generator();
-    return { generator, generate, battleText };
+    return { generator, generate, battleText, fightID, E9SFight };
   },
 });
 </script>

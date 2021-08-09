@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": 0,
     "name": "Eden's Promise: Umbra",
     "shortName": "E9S",
     "phases": [
@@ -37,13 +37,13 @@
     ]
   },
   {
-    "id": 2,
+    "id": 1,
     "name": "Eden's Verse: Fulmination",
     "shortName": "E56",
     "phases": [
       {
         "phase": 1,
-        "popupText": "Lorem1",
+        "popupText": "Lorem12",
         "tank1Pos": 0,
         "tank2Pos": 0,
         "MDPS1Pos": 0,
@@ -53,7 +53,7 @@
       },
       {
         "phase": 1,
-        "popupText": "Lorem2",
+        "popupText": "Lorem22",
         "tank1Pos": 250,
         "tank2Pos": 0,
         "MDPS1Pos": 0,
@@ -63,8 +63,8 @@
       },
       {
         "phase": 1,
-        "popupText": "Lorem3",
-        "tank1Pos": 500,
+        "popupText": "Lorem32",
+        "tank1Pos": 100,
         "tank2Pos": 0,
         "MDPS1Pos": 0,
         "MDPS2Pos": 0,
