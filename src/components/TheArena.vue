@@ -12,7 +12,8 @@
           srcset=""
         />
       </div>
-      <div class="m-2 rounded bg-gray-400 row-span-1 flex items-center justify-center">
+      <div class="m-2 rounded bg-gray-400 row-span-1 flex flex-col items-center justify-center">
+        <p class="p-2">{{ battleText }}</p>
         <button class="bg-red-700 p-2 rounded bottom-0" type="submit" @click="generate.next()">Click Me</button>
       </div>
     </div>
@@ -21,37 +22,43 @@
 
 <script lang="ts">
 import anime from "animejs";
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
+import json from "@/encounters/raids/E9S.json";
 
 export default defineComponent({
   setup() {
+    const E9SFight = json;
+    const battleText = ref<string>("")
     const generator = function* () {
       while (true) {
         anime({
           targets: "#mar",
-          translateX: 250,
+          translateX: E9SFight[0].tank1Pos,
           easing: "easeInOutSine",
           duration: 400,
         });
+        battleText.value = E9SFight[0].popupText;
         yield;
         anime({
           targets: "#mar",
-          translateX: 500,
+          translateX: E9SFight[1].tank1Pos,
           easing: "easeInOutSine",
           duration: 400,
         });
+        battleText.value = E9SFight[1].popupText;
         yield;
         anime({
           targets: "#mar",
-          translateX: 0,
+          translateX: E9SFight[2].tank1Pos,
           easing: "easeInOutSine",
           duration: 400,
         });
+        battleText.value = E9SFight[2].popupText;
         yield;
       }
     };
     let generate = generator();
-    return { generator, generate };
+    return { generator, generate, battleText };
   },
 });
 </script>
