@@ -39,7 +39,7 @@
 <script lang="ts">
 import anime from "animejs";
 import { defineComponent, ref } from "vue";
-import json from "@/encounters/raids/E9S.json";
+import json from "@/encounters/raids/raids-savage.json";
 
 export default defineComponent({
   setup() {
@@ -49,27 +49,27 @@ export default defineComponent({
       while (true) {
         anime({
           targets: "#mar",
-          translateX: E9SFight[0].tank1Pos,
+          translateX: E9SFight[0].phases[0].tank1Pos,
           easing: "easeInOutSine",
           duration: 400,
         });
-        battleText.value = E9SFight[0].popupText;
+        battleText.value = E9SFight[0].phases[0].popupText;
         yield;
         anime({
           targets: "#mar",
-          translateX: E9SFight[1].tank1Pos,
+          translateX: E9SFight[0].phases[1].tank1Pos,
           easing: "easeInOutSine",
           duration: 400,
         });
-        battleText.value = E9SFight[1].popupText;
+        battleText.value = E9SFight[0].phases[1].popupText;
         yield;
         anime({
           targets: "#mar",
-          translateX: E9SFight[2].tank1Pos,
+          translateX: E9SFight[0].phases[2].tank1Pos,
           easing: "easeInOutSine",
           duration: 400,
         });
-        battleText.value = E9SFight[2].popupText;
+        battleText.value = E9SFight[0].phases[2].popupText;
         yield;
       }
     };
