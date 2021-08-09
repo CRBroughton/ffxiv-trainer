@@ -12,9 +12,25 @@
           srcset=""
         />
       </div>
-      <div class="m-2 rounded bg-gray-400 row-span-1 flex flex-col items-center justify-center">
+      <div
+        class="
+          m-2
+          rounded
+          bg-gray-400
+          row-span-1
+          flex flex-col
+          items-center
+          justify-center
+        "
+      >
         <p class="p-2">{{ battleText }}</p>
-        <button class="bg-red-700 p-2 rounded bottom-0" type="submit" @click="generate.next()">Click Me</button>
+        <button
+          class="bg-red-700 p-2 rounded bottom-0"
+          type="submit"
+          @click="generate.next()"
+        >
+          Click Me
+        </button>
       </div>
     </div>
   </div>
@@ -28,7 +44,7 @@ import json from "@/encounters/raids/E9S.json";
 export default defineComponent({
   setup() {
     const E9SFight = json;
-    const battleText = ref<string>("")
+    const battleText = ref<string>("");
     const generator = function* () {
       while (true) {
         anime({
@@ -63,5 +79,4 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
