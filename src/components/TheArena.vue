@@ -44,40 +44,21 @@ export default defineComponent({
       return require('../assets/'+img+".png");
     }
 
+    let currentPhases = ref<number>(0);
+
     const generator = function* () {
       while (true) {
         for (const iterator of positions) {
           anime({
             targets: `#${iterator}`,
-            translateX: json[fightID.value].phases[0][`${iterator}`].coords[0],
-            translateY: json[fightID.value].phases[0][`${iterator}`].coords[1],
+            translateX: json[fightID.value].phases[currentPhases.value][`${iterator}`].coords[0],
+            translateY: json[fightID.value].phases[currentPhases.value][`${iterator}`].coords[1],
             easing: "easeInOutSine",
             duration: 400,
           });
-          battleText.value = json[fightID.value].phases[0].popupText;
+          battleText.value = json[fightID.value].phases[currentPhases.value].popupText;
         }
-        yield;
-        for (const iterator of positions) {
-          anime({
-            targets: `#${iterator}`,
-            translateX: json[fightID.value].phases[1][`${iterator}`].coords[0],
-            translateY: json[fightID.value].phases[1][`${iterator}`].coords[1],
-            easing: "easeInOutSine",
-            duration: 400,
-          });
-          battleText.value = json[fightID.value].phases[1].popupText;
-        }
-        yield;
-        for (const iterator of positions) {
-          anime({
-            targets: `#${iterator}`,
-            translateX: json[fightID.value].phases[2][`${iterator}`].coords[0],
-            translateY: json[fightID.value].phases[2][`${iterator}`].coords[1],
-            easing: "easeInOutSine",
-            duration: 400,
-          });
-          battleText.value = json[fightID.value].phases[2].popupText;
-        }
+          currentPhases.value++;
         yield;
       }
     };
