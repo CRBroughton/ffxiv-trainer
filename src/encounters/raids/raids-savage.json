@@ -70,8 +70,39 @@
         }
       },
       {
-        "phase": 1,
+        "phase": 2,
         "popupText": "Tankbuster Phase",
+        "tank1": {
+          "coords": [0, -200]
+        },
+        "tank2": {
+          "coords": [0, 50]
+        },
+        "melee1": {
+          "coords": [-50, 50]
+        },
+        "melee2": {
+          "coords": [50, 50]
+        },
+        "ranged1": {
+          "coords": [-50, 200]
+        },
+        "ranged2": {
+          "coords": [50, 200]
+        },
+        "healer1": {
+          "coords": [-50, 100]
+        },
+        "healer2": {
+          "coords": [50, 100]
+        },
+        "boss": {
+          "coords": [0, 0]
+        }
+      },
+      {
+        "phase": 3,
+        "popupText": "Flower Phase",
         "tank1": {
           "coords": [0, -200]
         },
