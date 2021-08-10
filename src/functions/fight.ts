@@ -3,7 +3,7 @@ import anime from "animejs";
 import json from "@/encounters/raids/raids-savage.json";
 
 const fightID = ref<number>(0);
-const positions = ["tank1"];
+const positions = ["tank1", "tank2", "ranged1", "ranged2", "melee1", "melee2", "healer1", "healer2", "boss"];
 
 const resetEncounter = () => {
   for (const iterator of positions) {
