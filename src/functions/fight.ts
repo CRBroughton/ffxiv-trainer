@@ -9,7 +9,8 @@ const resetEncounter = () => {
   for (const iterator of positions) {
     anime({
       targets: `#${iterator}`,
-      translateX: json[fightID.value].phases[0][`${iterator}`].coords[0],
+      translateX: json[fightID.value].phases[0]["defaultCoords"].coords[0],
+      translateY: json[fightID.value].phases[0]["defaultCoords"].coords[1],
       easing: "easeInOutSine",
       duration: 400,
     });
