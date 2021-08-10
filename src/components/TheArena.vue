@@ -7,7 +7,7 @@
           :key="position"
           :id="position"
           class="fixed w-14 h-14"
-          :src=getImgUrl(position)
+          :src="getImgUrl(position)"
           alt=""
           srcset=""
         />
@@ -40,30 +40,47 @@ export default defineComponent({
     const raid = json;
     const battleText = ref<string>("");
 
-    const getImgUrl = function(img) {
-      return require('../assets/'+img+".png");
-    }
+    const getImgUrl = function (img) {
+      return require("../assets/" + img + ".png");
+    };
 
     let currentPhases = ref<number>(0);
 
     const generator = function* () {
-      while (true) {
+      while (true && currentPhases.value <= 4) {
         for (const iterator of positions) {
           anime({
             targets: `#${iterator}`,
-            translateX: json[fightID.value].phases[currentPhases.value][`${iterator}`].coords[0],
-            translateY: json[fightID.value].phases[currentPhases.value][`${iterator}`].coords[1],
+            translateX:
+              json[fightID.value].phases[currentPhases.value][`${iterator}`]
+                .coords[0],
+            translateY:
+              json[fightID.value].phases[currentPhases.value][`${iterator}`]
+                .coords[1],
             easing: "easeInOutSine",
             duration: 400,
           });
-          battleText.value = json[fightID.value].phases[currentPhases.value].popupText;
+          battleText.value =
+            json[fightID.value].phases[currentPhases.value].popupText;
         }
+        if (currentPhases.value >= 4) {
+          currentPhases.value = 0;
+        } else {
           currentPhases.value++;
-        yield;
+          yield;
+        }
       }
     };
     let generate = generator();
-    return { generator, getImgUrl, generate, battleText, fightID, raid, positions };
+    return {
+      generator,
+      getImgUrl,
+      generate,
+      battleText,
+      fightID,
+      raid,
+      positions,
+    };
   },
 });
 </script>

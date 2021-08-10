@@ -104,7 +104,7 @@
         "phase": 3,
         "popupText": "Flower Phase",
         "tank1": {
-          "coords": [0, -200]
+          "coords": [100, -200]
         },
         "tank2": {
           "coords": [0, 50]
@@ -126,6 +126,37 @@
         },
         "healer2": {
           "coords": [50, 100]
+        },
+        "boss": {
+          "coords": [0, 0]
+        }
+      },
+      {
+        "phase": 4,
+        "popupText": "Final",
+        "tank1": {
+          "coords": [0, 0]
+        },
+        "tank2": {
+          "coords": [0, 0]
+        },
+        "melee1": {
+          "coords": [0, 0]
+        },
+        "melee2": {
+          "coords": [0, 0]
+        },
+        "ranged1": {
+          "coords": [0, 0]
+        },
+        "ranged2": {
+          "coords": [0, 0]
+        },
+        "healer1": {
+          "coords": [0, 0]
+        },
+        "healer2": {
+          "coords": [0, 0]
         },
         "boss": {
           "coords": [0, 0]
