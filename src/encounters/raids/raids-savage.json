@@ -7,32 +7,53 @@
       {
         "phase": 1,
         "popupText": "Lorem1",
-        "tank1Pos": [0, 0],
-        "tank2Pos": 0,
-        "MDPS1Pos": 0,
-        "MDPS2Pos": 0,
-        "RDPS1Pos": 0,
-        "RDPS2Pos": 0
+        "tank1": {
+          "coords": [0, 0]
+        }
       },
       {
-        "phase": 1,
+        "phase": 2,
         "popupText": "Lorem2",
-        "tank1Pos": [250, 0],
-        "tank2Pos": 0,
-        "MDPS1Pos": 0,
-        "MDPS2Pos": 0,
-        "RDPS1Pos": 0,
-        "RDPS2Pos": 0
+        "tank1": {
+          "coords": [100, 0]
+        },
+        "tank2": {
+          "coords": [0, 0]
+        },
+        "MDPS1": {
+          "coords": [0, 0]
+        },
+        "MDPS2": {
+          "coords": [0, 0]
+        },
+        "RDPS1": {
+          "coords": [0, 0]
+        },
+        "RDPS2": {
+          "coords": [0, 0]
+        }
       },
       {
-        "phase": 1,
+        "phase": 3,
         "popupText": "Lorem3",
-        "tank1Pos": [500, 0],
-        "tank2Pos": 0,
-        "MDPS1Pos": 0,
-        "MDPS2Pos": 0,
-        "RDPS1Pos": 0,
-        "RDPS2Pos": 0
+        "tank1": {
+          "coords": [200, 0]
+        },
+        "tank2": {
+          "coords": [0, 0]
+        },
+        "MDPS1": {
+          "coords": [0, 0]
+        },
+        "MDPS2": {
+          "coords": [0, 0]
+        },
+        "RDPS1": {
+          "coords": [0, 0]
+        },
+        "RDPS2": {
+          "coords": [0, 0]
+        }
       }
     ]
   },
