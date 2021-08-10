@@ -7,6 +7,9 @@
       {
         "phase": 0,
         "popupText": "Spread Phase",
+        "defaultCoords": {
+          "coords": [0, 0]
+        },
         "tank1": {
           "coords": [0, -200]
         },
@@ -68,62 +71,34 @@
       },
       {
         "phase": 1,
-        "popupText": "Lorem3",
+        "popupText": "Tankbuster Phase",
         "tank1": {
-          "coords": [120, 0]
+          "coords": [0, -200]
         },
         "tank2": {
-          "coords": [130, 0]
+          "coords": [0, 50]
         },
         "melee1": {
-          "coords": [0, 0]
+          "coords": [-50, 50]
         },
         "melee2": {
-          "coords": [0, 0]
+          "coords": [50, 50]
         },
         "ranged1": {
-          "coords": [100, 0]
+          "coords": [-50, 200]
         },
         "ranged2": {
+          "coords": [50, 200]
+        },
+        "healer1": {
+          "coords": [-50, 100]
+        },
+        "healer2": {
+          "coords": [50, 100]
+        },
+        "boss": {
           "coords": [0, 0]
         }
-      }
-    ]
-  },
-  {
-    "id": 1,
-    "name": "Eden's Verse: Fulmination",
-    "shortName": "E56",
-    "phases": [
-      {
-        "phase": 1,
-        "popupText": "Lorem12",
-        "tank1Pos": [0, 0],
-        "tank2Pos": 0,
-        "MDPS1Pos": 0,
-        "MDPS2Pos": 0,
-        "RDPS1Pos": 0,
-        "RDPS2Pos": 0
-      },
-      {
-        "phase": 1,
-        "popupText": "Lorem22",
-        "tank1Pos": [-250, 0],
-        "tank2Pos": 0,
-        "MDPS1Pos": 0,
-        "MDPS2Pos": 0,
-        "RDPS1Pos": 0,
-        "RDPS2Pos": 0
-      },
-      {
-        "phase": 1,
-        "popupText": "Lorem32",
-        "tank1Pos": [-500, 0],
-        "tank2Pos": 0,
-        "MDPS1Pos": 0,
-        "MDPS2Pos": 0,
-        "RDPS1Pos": 0,
-        "RDPS2Pos": 0
       }
     ]
   }
