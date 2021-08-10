@@ -5,53 +5,86 @@
     "shortName": "E9S",
     "phases": [
       {
-        "phase": 1,
-        "popupText": "Lorem1",
+        "phase": 0,
+        "popupText": "Spread Phase",
         "tank1": {
-          "coords": [0, 0]
-        }
-      },
-      {
-        "phase": 2,
-        "popupText": "Lorem2",
-        "tank1": {
-          "coords": [100, 0]
+          "coords": [0, -200]
         },
         "tank2": {
-          "coords": [0, 0]
+          "coords": [0, 200]
         },
-        "MDPS1": {
-          "coords": [0, 0]
+        "melee1": {
+          "coords": [-150, -150]
         },
-        "MDPS2": {
-          "coords": [0, 0]
+        "melee2": {
+          "coords": [150, -150]
         },
-        "RDPS1": {
-          "coords": [0, 0]
+        "ranged1": {
+          "coords": [-150, 150]
         },
-        "RDPS2": {
-          "coords": [0, 0]
-        }
-      },
-      {
-        "phase": 3,
-        "popupText": "Lorem3",
-        "tank1": {
+        "ranged2": {
+          "coords": [150, 150]
+        },
+        "healer1": {
+          "coords": [-200, 0]
+        },
+        "healer2": {
           "coords": [200, 0]
         },
+        "boss": {
+          "coords": [0, 0]
+        }
+      },
+      {
+        "phase": 1,
+        "popupText": "Stack Phase",
+        "tank1": {
+          "coords": [0, -200]
+        },
         "tank2": {
+          "coords": [0, 200]
+        },
+        "melee1": {
+          "coords": [-10, -190]
+        },
+        "melee2": {
+          "coords": [200, 10]
+        },
+        "ranged1": {
+          "coords": [-190, 10]
+        },
+        "ranged2": {
+          "coords": [0, 190]
+        },
+        "healer1": {
+          "coords": [-200, 0]
+        },
+        "healer2": {
+          "coords": [200, 0]
+        },
+        "boss": {
+          "coords": [0, 0]
+        }
+      },
+      {
+        "phase": 1,
+        "popupText": "Lorem3",
+        "tank1": {
+          "coords": [120, 0]
+        },
+        "tank2": {
+          "coords": [130, 0]
+        },
+        "melee1": {
           "coords": [0, 0]
         },
-        "MDPS1": {
+        "melee2": {
           "coords": [0, 0]
         },
-        "MDPS2": {
-          "coords": [0, 0]
+        "ranged1": {
+          "coords": [100, 0]
         },
-        "RDPS1": {
-          "coords": [0, 0]
-        },
-        "RDPS2": {
+        "ranged2": {
           "coords": [0, 0]
         }
       }
