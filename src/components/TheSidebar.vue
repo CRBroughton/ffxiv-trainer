@@ -1,8 +1,8 @@
 <template>
-  <div class="bg-gray-500 h-screen">
-    <div class="mt-10 bg-red-400 p-2">
+  <div class="bg-gray-600 h-screen">
+    <div class="mt-10 p-2">
       <ul class="text-sm" v-for="fight in fights" :key="fight.id">
-        <button class="py-2" @click="setFightID(fight.id)">
+        <button class="mx-auto my-1 py-2 text-white font-medium bg-gray-400 w-full" @click="setFightID(fight.id)">
           {{ fight.name }}
         </button>
       </ul>
@@ -13,7 +13,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import json from "@/encounters/raids/raids-savage.json";
-import { fightID } from "@/functions/fight";
+import { fightID, resetEncounter } from "@/functions/fight";
 
 export default defineComponent({
   setup() {
@@ -21,7 +21,7 @@ export default defineComponent({
 
     const setFightID = function (id: number) {
       fightID.value = id;
-      console.log(fightID.value);
+      resetEncounter();
     };
 
     return { fights, fightID, setFightID };

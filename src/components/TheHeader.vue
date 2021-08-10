@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-red-200 p-2 relative">FFXIV TRAINER</div>
+  <div class="bg-gray-700 p-2 relative text-white font-semibold">FFXIV TRAINER</div>
 </template>
 
 <script lang="ts">

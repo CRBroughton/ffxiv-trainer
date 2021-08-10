@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="font-inter">
     <TheHeader />
   </div>
-  <div class="grid grid-cols-10 -mt-10">
+  <div class="grid grid-cols-10 -mt-10 font-inter">
     <TheSidebar class="col-span-1" />
     <TheArena class="col-span-9" />
   </div>
