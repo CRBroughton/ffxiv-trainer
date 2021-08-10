@@ -5,9 +5,9 @@
         <img
           v-for="position in positions"
           :key="position"
-          id="tank1"
-          class="fixed w-16 h-16"
-          src="../assets/Tank_Icon_1.png"
+          :id="position"
+          class="fixed w-14 h-14"
+          :src=getImgUrl(position)
           alt=""
           srcset=""
         />
@@ -33,19 +33,24 @@
 import anime from "animejs";
 import { defineComponent, ref } from "vue";
 import json from "@/encounters/raids/raids-savage.json";
-import { fightID, positions } from "@/functions/fight";
+import { fightID, positions, resetEncounter } from "@/functions/fight";
 
 export default defineComponent({
   setup() {
     const raid = json;
     const battleText = ref<string>("");
 
+    const getImgUrl = function(img) {
+      return require('../assets/'+img+".png");
+    }
+
     const generator = function* () {
       while (true) {
         for (const iterator of positions) {
           anime({
             targets: `#${iterator}`,
-            translateX: 0,
+            translateX: json[fightID.value].phases[0][`${iterator}`].coords[0],
+            translateY: json[fightID.value].phases[0][`${iterator}`].coords[1],
             easing: "easeInOutSine",
             duration: 400,
           });
@@ -55,7 +60,8 @@ export default defineComponent({
         for (const iterator of positions) {
           anime({
             targets: `#${iterator}`,
-            translateX: 100,
+            translateX: json[fightID.value].phases[1][`${iterator}`].coords[0],
+            translateY: json[fightID.value].phases[1][`${iterator}`].coords[1],
             easing: "easeInOutSine",
             duration: 400,
           });
@@ -66,6 +72,7 @@ export default defineComponent({
           anime({
             targets: `#${iterator}`,
             translateX: json[fightID.value].phases[2][`${iterator}`].coords[0],
+            translateY: json[fightID.value].phases[2][`${iterator}`].coords[1],
             easing: "easeInOutSine",
             duration: 400,
           });
@@ -75,7 +82,7 @@ export default defineComponent({
       }
     };
     let generate = generator();
-    return { generator, generate, battleText, fightID, raid, positions };
+    return { generator, getImgUrl, generate, battleText, fightID, raid, positions };
   },
 });
 </script>
