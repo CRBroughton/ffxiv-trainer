@@ -33,7 +33,7 @@
 import anime from "animejs";
 import { defineComponent, ref } from "vue";
 import json from "@/encounters/raids/raids-savage.json";
-import { fightID, positions, resetEncounter } from "@/functions/fight";
+import { fightID, positions, currentPhases } from "@/functions/fight";
 
 export default defineComponent({
   setup() {
@@ -44,7 +44,7 @@ export default defineComponent({
       return require("../assets/" + img + ".png");
     };
 
-    let currentPhases = ref<number>(0);
+
 
     const generator = function* () {
       while (true && currentPhases.value <= 4) {
