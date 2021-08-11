@@ -40,7 +40,7 @@ export default defineComponent({
     const raid = json;
     const battleText = ref<string>("");
 
-    const getImgUrl = function (img) {
+    const getImgUrl = function (img: string) {
       return require("../assets/" + img + ".png");
     };
 
