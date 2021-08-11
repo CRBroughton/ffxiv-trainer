@@ -44,10 +44,8 @@ export default defineComponent({
       return require("../assets/" + img + ".png");
     };
 
-
-
     const generator = function* () {
-      while (true && currentPhases.value <= 4) {
+      while (true && currentPhases.value <= json[fightID.value].phases.length - 1) {
         for (const iterator of positions) {
           anime({
             targets: `#${iterator}`,
@@ -63,7 +61,7 @@ export default defineComponent({
           battleText.value =
             json[fightID.value].phases[currentPhases.value].popupText;
         }
-        if (currentPhases.value >= 4) {
+        if (currentPhases.value >= json[fightID.value].phases.length - 1) {
           currentPhases.value = 0;
         } else {
           currentPhases.value++;
