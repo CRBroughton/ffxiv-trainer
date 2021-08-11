@@ -7,6 +7,8 @@
       {
         "phase": 0,
         "popupText": "Spread Phase",
+        "easing": "easeInOutSine",
+        "duration": 400,
         "defaultCoords": {
           "coords": [0, 0]
         },
@@ -41,6 +43,8 @@
       {
         "phase": 1,
         "popupText": "Stack Phase",
+        "easing": "easeInOutSine",
+        "duration": 400,
         "tank1": {
           "coords": [0, -200]
         },
@@ -72,6 +76,8 @@
       {
         "phase": 2,
         "popupText": "Tankbuster Phase",
+        "easing": "easeInOutSine",
+        "duration": 400,
         "tank1": {
           "coords": [0, -200]
         },
@@ -103,6 +109,8 @@
       {
         "phase": 3,
         "popupText": "Flower Phase",
+        "easing": "easeInOutSine",
+        "duration": 400,
         "tank1": {
           "coords": [100, -200]
         },
@@ -134,6 +142,8 @@
       {
         "phase": 4,
         "popupText": "Final",
+        "easing": "easeInOutSine",
+        "duration": 400,
         "tank1": {
           "coords": [0, 0]
         },
