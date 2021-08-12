@@ -57,7 +57,20 @@ export default defineComponent({
           });
           battleText.value =
             json[fightID.value].phases[currentPhases.value].popupText;
+
+
+          // Shows the aggro target for each phase
+          if (json[fightID.value].phases[currentPhases.value][`${iterator}`].aggro == true) {
+            anime({
+              targets: `#${iterator}`,
+              opacity: [1, .5, 1],
+              loop: 3,
+              easing: 'easeInOutSine'
+            })
+          }  
         }
+
+
         if (currentPhases.value >= json[fightID.value].phases.length - 1) {
           currentPhases.value = 0;
         } else {
