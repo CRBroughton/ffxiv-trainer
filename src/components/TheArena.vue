@@ -33,12 +33,10 @@
 import anime from "animejs";
 import { defineComponent, ref } from "vue";
 import json from "@/encounters/raids/raids-savage.json";
-import { fightID, positions, currentPhases } from "@/functions/fight";
+import { fightID, battleText, positions, currentPhases } from "@/functions/fight";
 
 export default defineComponent({
   setup() {
-    const battleText = ref<string>("");
-
     const getImgUrl = function (img: string) {
       return require("../assets/" + img + ".png");
     };
