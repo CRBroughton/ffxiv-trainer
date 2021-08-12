@@ -31,7 +31,7 @@
 
 <script lang="ts">
 import anime from "animejs";
-import { defineComponent, ref } from "vue";
+import { defineComponent } from "vue";
 import json from "@/encounters/raids/raids-savage.json";
 import { fightID, battleText, positions, currentPhases } from "@/functions/fight";
 
